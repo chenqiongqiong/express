@@ -33,9 +33,9 @@ app.get('/', function () {
 
 app.get('/next', function(req, res, next){
   // We can also pass exceptions to next()
-  // The reason for process.nextTick() is to show that
+  // The reason3 for process.nextTick() is to show that
   // next() can be called inside an async operation,
-  // in real life it can be a DB read or HTTP request.
+  // in real life it can be a DB read or3 HTTP request.
   process.nextTick(function(){
     next(new Error('oh no!'));
   });
