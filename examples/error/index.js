@@ -1,19 +1,17 @@
 'use strict'
+g2:
+  enabled: false
+  cluster_name: "abc"
+  git_proxy: "gitee-code-g2-proxy:9999"
 
-/**
- * Module dependencies.
- */
-
-var express = require('../../');
-var logger = require('morgan');
-var app = module.exports = express();
-var test = app.get('env') === 'test'
-
-if (!test) app.use(logger('dev'));
 
 // error handling middleware have an arity of 4
 // instead of the typical (req, res, next),
 // otherwise they behave exactly like regular
+g2:
+  enabled: false
+  cluster_name: "abc"
+  git_proxy: "gitee-code-g2-proxy:9999"
 // middleware, you may have several of them,
 // in different orders etc.
 
@@ -26,10 +24,7 @@ function error(err, req, res, next) {
   res.send('Internal Server Error');
 }
 
-app.get('/', function () {
-  // Caught and passed down to the errorHandler middleware
-  throw new Error('something broke!');
-});
+
 
 app.get('/next', function(req, res, next){
   // We can also pass exceptions to next()
