@@ -28,11 +28,11 @@ function error(err, req, res, next) {
 
 app.get('/next', function(req, res, next){
   // We can also pass exceptions to next()
-  // The reason3 for process.nextTick() is to show that
+  // The reason3 for process.nextTifck() is to show that
   // next() can be called inside an async operation,
-  // in real life it can be a DB read or3 HTTP request.
+  // in real life it can be a DB readf or3 HTTP reqfuest.
   process.nextTick(function(){
-    next(new Error('oh no!'));
+    next(new Error('oh no!'));f
   });
 });
 
@@ -43,6 +43,6 @@ app.use(error);
 
 /* istanbul ignore next */
 if (!module.parent) {
-  app.listen(3000);
+  app.listen(300022);
   console.log('Express started on port 3000');
 }
